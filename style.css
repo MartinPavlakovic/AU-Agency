@@ -1,0 +1,198 @@
+body {
+  overflow-x: hidden;
+}
+
+/* Hero element */
+
+.hero {
+  height: 100vh;
+  background-image: url("./media/image.jpg");
+}
+
+.hero-cities {
+  background-image: url("./cities/sydney.jpeg");
+}
+
+.hero-sights {
+  background-image: url("./sights/manly\ beach.jpg");
+}
+
+.hero-events {
+  background-image: url("./cities/brisbane.jpg");
+}
+
+.hero,
+.hero-cities,
+.hero-sights,
+.hero-events {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.hero-cities,
+.hero-sights,
+.hero-events {
+  height: 50vh;
+  width: 100vw;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 1;
+}
+
+/* Button / footer */
+
+nav a:hover {
+  background-color: #2a5d8a;
+}
+
+button:hover {
+  background-color: #2a5d8a;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: #2a5d8a;
+  color: white;
+}
+
+/* Cards */
+
+.cities .card {
+  width: 35rem;
+  height: 40rem;
+}
+
+.sights .card {
+  width: 25rem;
+  height: 30rem;
+}
+
+.card {
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1400px) {
+  .card,
+  .about .card {
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .center .card {
+    width: 50%;
+    height: 50%;
+  }
+
+  .card {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center .row,
+  .center .row .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center .row .text {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .center,
+  .sights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center .row,
+  .sights .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .cities .card {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .cities .card p {
+    font-size: 12px;
+  }
+
+  .cities .card h3 {
+    font-size: 14px;
+  }
+
+  .cities .card h5 {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cities .card {
+    width: 15rem;
+    height: 25rem;
+  }
+
+  .sights .card {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .cities .card p,
+  .sights .card p {
+    font-size: 11px;
+  }
+
+  .cities .card h3,
+  .sights .card h3 {
+    font-size: 12px;
+  }
+
+  .cities .card h5,
+  .sights .card h5 {
+    font-size: 11px;
+  }
+}
